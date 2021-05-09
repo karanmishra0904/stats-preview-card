@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        background-color: hsl(233, 47%, 7%);
+        color: #fff;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        /* height: 100%; */
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .main-box {
+        position: relative;
+        height: 100vh;
+      }
+      .main-box-inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+      }
+      .left-box {
+        background-color: hsl(244, 38%, 16%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 60px;
+        flex: 1;
+        border-radius: 10px 0 0 10px;
+      }
+      .stats-box {
+        display: flex;
+        justify-content: space-between;
+      }
+      .stats-box div {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .stats-box span {
+        font-size: 10px;
+        font-weight: 400;
+        color: hsla(0, 0%, 100%, 0.6);
+      }
+      .stats-box span {
+        display: block;
+        text-transform: uppercase;
+        margin-top: 5px;
+      }
+      .right-box {
+        flex: 1;
+        display: flex;
+        background-color: hsl(277, 64%, 61%);
+        border-radius: 0 10px 10px 0;
+      }
+      .right-box img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0 10px 10px 0;
+        mix-blend-mode: multiply;
+      }
+
+      .description-text {
+        font-size: 15px;
+        color: hsla(0, 0%, 100%, 0.75);
+        margin-bottom: 80px;
+      }
+      @media (max-width: 767px) {
+        .main-box-inner {
+          flex-direction: column;
+          width: 80%;
+        }
+        .right-box {
+          order: 0;
+          border-radius: 10px 10px 0 0;
+        }
+        .right-box img {
+          border-radius: 10px 10px 0 0;
+        }
+        .left-box {
+          order: 1;
+          padding: 30px;
+          text-align: center;
+          border-radius: 0 0 10px 10px;
+        }
+        .stats-box {
+          flex-direction: column;
+        }
+        .stats-box div {
+          margin-bottom: 30px;
+        }
+        .description-text {
+          font-size: 15px;
+          color: hsla(0, 0%, 100%, 0.75);
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="main-box-inner">
+        <div class="left-box">
+          <h1 style="margin: 0">
+            Get <span style="color: hsl(277, 64%, 61%)">insights</span> that
+            help your business grow.
+          </h1>
+          <p class="description-text">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="stats-box">
+            <div>10k+ <span>companies</span></div>
+            <div>314 <span>templates</span></div>
+            <div>12M+ <span>queries</span></div>
+          </div>
+        </div>
+        <div class="right-box">
+          <img src="./images/image-header-desktop.jpg" alt="people at work" />
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Karan Mishra</a>.
+    </div>
+  </body>
+</html>
